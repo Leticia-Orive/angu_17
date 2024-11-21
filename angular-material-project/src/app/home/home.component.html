@@ -1,0 +1,15 @@
+<div class="product-list">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ product.description }}</p>
+        <p><strong>Precio:</strong> {{ product.price | currency }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" [routerLink]="['/product', product.id]">
+          Ver producto
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
